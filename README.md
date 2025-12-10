@@ -4,20 +4,6 @@ A microservices-based feedback platform with **real-time sentiment analysis** an
 
 It provides RESTful APIs using **Node.js + Express**, communicates with a **Python FastAPI sentiment service**, and persists data in **MongoDB**.
 
-## Architecture Overview
-
-```
-Client Apps (Web, Mobile, Postman)
-        │
-        ▼
-Node.js API (Port 3000)
-  - CRUD endpoints for feedback
-  - Calls Python sentiment service
-        │
-        ├── POST /analyze → Python FastAPI (Port 8000)
-        └── MongoDB (Port 27017)
-```
-
 ## API Endpoints
 
 | Method | Endpoint | Description |
