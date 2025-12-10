@@ -1,8 +1,8 @@
 # Feedback Hub
 
-A microservices-based feedback platform with **real-time sentiment analysis** and **MongoDB storage**.
+Microservices-based feedback platform with **real-time sentiment analysis** and **MongoDB storage**.
 
-It provides RESTful APIs using **Node.js + Express**, communicates with a **Python FastAPI sentiment service**, and persists data in **MongoDB**.
+Provides RESTful APIs using **Node.js + Express**, communicates with a **Python FastAPI sentiment service**, and persists data in **MongoDB**.
 
 ## API Endpoints
 
@@ -26,7 +26,7 @@ It provides RESTful APIs using **Node.js + Express**, communicates with a **Pyth
 { "label": "positive", "score": 0.85 }
 ```
 
-## How It Works
+## What it does
 
 1. Client sends feedback: `{ text, user }`
 2. Node API calls Python `/analyze`
@@ -36,22 +36,12 @@ It provides RESTful APIs using **Node.js + Express**, communicates with a **Pyth
 
 ## Quick Start
 
-### Option 1: Docker (Recommended)
+Docker
 
 ```bash
 docker-compose up -d
 docker-compose logs -f
 docker-compose down
-```
-
-### Option 2: Manual Setup
-
-#### Run Python Service
-
-```bash
-cd python-service
-pip install -r requirements.txt
-uvicorn sentiment_service:app --port 8000
 ```
 
 #### Run Node API
@@ -97,16 +87,6 @@ curl http://localhost:3000/api/stats
 }
 ```
 
-## Project Structure
-
-```
-feedback-hub/
-├── node-api/            # Express server
-├── python-service/      # FastAPI sentiment service
-├── docker-compose.yml   # Multi-service orchestration
-└── README.md
-```
-
 ## Technologies
 
 - **Node.js + Express**
@@ -114,7 +94,3 @@ feedback-hub/
 - **MongoDB + Mongoose**
 - **VADER Sentiment**
 - **Docker**
-
-## License
-
-MIT License — free to use, modify, deploy.
